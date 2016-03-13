@@ -1,11 +1,12 @@
 // JSON API for list of movies
 exports.list = function (req, res) {
-    res.json({
-    	"movies": [
+    res.json(
+    	[
     		{
     			"id": 0,
 	            "title": "Spider Man I",
 	            "description": "here are some description",
+                "poster": "x-man.jpg",
 	            "year": "2000",
 	            "director": "Tom Yu",
 	            "actors": ["Tom", "Sam"]
@@ -14,6 +15,7 @@ exports.list = function (req, res) {
     			"id": 1,
 	            "title": "Spider Man I",
 	            "description": "here are some description",
+                "poster": "x-man.jpg",
 	            "year": "2000",
 	            "director": "Tom Yu",
 	            "actors": ["Tom", "Sam"]
@@ -22,6 +24,7 @@ exports.list = function (req, res) {
     			"id": 2,
 	            "title": "Spider Man I",
 	            "description": "here are some description",
+                "poster": "x-man.jpg",
 	            "year": "2000",
 	            "director": "Tom Yu",
 	            "actors": ["Tom", "Sam"]
@@ -30,13 +33,12 @@ exports.list = function (req, res) {
     			"id": 3,
 	            "title": "Spider Man I",
 	            "description": "here are some description",
+                "poster": "x-man.jpg",
 	            "year": "2000",
 	            "director": "Tom Yu",
 	            "actors": ["Tom", "Sam"]
 	        },
-    	]
-        
-    });
+    	]);
 };
 
 exports.get = function(req, res) {
@@ -45,6 +47,7 @@ exports.get = function(req, res) {
 		"id": id,
         "title": "Spider Man I",
         "description": "here are some description",
+        "poster": "x-man.jpg",
         "year": "2000",
         "director": "Tom Yu",
         "actors": ["Tom", "Sam"]

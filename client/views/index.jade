@@ -1,5 +1,6 @@
 extends layout
 
 block content
-    div
-        p {{message}}
+    div(class="row")
+        div(class="col-sm-12 container" ng-repeat="movie in movies")
+            img(ng-src="/images/posters/{{movie.poster}}" class="thumbnail" width=200 height=300)

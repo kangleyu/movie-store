@@ -1,0 +1,29 @@
+{
+  "name": "movie-store",
+  "description": "personal movie store web application based on MEAN and grunt",
+  "main": "app.js",
+  "authors": [
+    "Tom Yu"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "movie",
+    "store",
+    "node.js",
+    "angular"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}

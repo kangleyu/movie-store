@@ -44,8 +44,6 @@ module.exports = function(grunt) {
                 options: {
                     pretty: true
                 },
-                //src: "client/views/index.jade",
-                //dest: "public/index.html"
                 files: {
                     "public/index.html": "client/views/index.jade",
                     "public/test.html": "client/views/test.jade"

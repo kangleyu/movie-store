@@ -6,8 +6,8 @@ html(lang='en', ng-app="moviestore_app" ng-controller="main_ctrl")
         include ./includes/head
         block styles
     body
-        // fixed navgiation bar
-        nav(class="navbar navbar-inverse navbar-fixed-top")
+        // static navgiation bar
+        nav(class="navbar navbar-inverse navbar-static-top")
             div(class="container")
                 div(class="nav-header")
                     button(type="button" class="navbar-toggle collapsed" data-toggle="copplase" data-target="#navbar" aria-expanded="false" aria-controls="navbar")
@@ -15,15 +15,13 @@ html(lang='en', ng-app="moviestore_app" ng-controller="main_ctrl")
                         span(class="icon-bar")
                         span(class="icon-bar")
                         span(class="icon-bar")
-                    a(href="#" class="navbar-brand") Movie Store
+                    a(href="/" class="navbar-brand") Movie Store
                 div(id="navbar" class="navbar-collapse collapse")
                     ul(class="nav navbar-nav")
-                        li(class="active"): a(href="#") Movies
-                        li: a(href="#categories") Categories
-                        li: a(href="#search") Search
+                        li(class="active"): a(href="/") Movies
                     ul(class="nav navbar-nav navbar-right")
                         li: a: span(class="glyphicon glyphicon-search" aria-hidden="true")
-        div(class="container jumbotron")
+        div(class="container")
             block content
         
         include ./includes/scripts

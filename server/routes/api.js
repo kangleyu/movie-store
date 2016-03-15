@@ -9,7 +9,8 @@ exports.list = function (req, res) {
                 "poster": "x-man.jpg",
 	            "year": "2000",
 	            "director": "Tom Yu",
-	            "actors": ["Tom", "Sam"]
+	            "actors": ["Tom", "Sam"],
+                "createdAt": "2016-1-02"
 	        },
 	        {
     			"id": 1,
@@ -18,7 +19,8 @@ exports.list = function (req, res) {
                 "poster": "x-man.jpg",
 	            "year": "2000",
 	            "director": "Tom Yu",
-	            "actors": ["Tom", "Sam"]
+	            "actors": ["Tom", "Sam"],
+                "createdAt": "2016-1-02"
 	        },
 	        {
     			"id": 2,
@@ -27,7 +29,8 @@ exports.list = function (req, res) {
                 "poster": "x-man.jpg",
 	            "year": "2000",
 	            "director": "Tom Yu",
-	            "actors": ["Tom", "Sam"]
+	            "actors": ["Tom", "Sam"],
+                "createdAt": "2016-1-02"
 	        },
 	        {
     			"id": 3,
@@ -36,7 +39,58 @@ exports.list = function (req, res) {
                 "poster": "x-man.jpg",
 	            "year": "2000",
 	            "director": "Tom Yu",
-	            "actors": ["Tom", "Sam"]
+	            "actors": ["Tom", "Sam"],
+                "createdAt": "2016-1-02"
+	        },
+            {
+    			"id": 4,
+	            "title": "Spider Man I",
+	            "description": "here are some description",
+                "poster": "x-man.jpg",
+	            "year": "2000",
+	            "director": "Tom Yu",
+	            "actors": ["Tom", "Sam"],
+                "createdAt": "2016-1-02"
+	        },
+            {
+    			"id": 5,
+	            "title": "Spider Man I",
+	            "description": "here are some description",
+                "poster": "x-man.jpg",
+	            "year": "2000",
+	            "director": "Tom Yu",
+	            "actors": ["Tom", "Sam"],
+                "createdAt": "2016-1-02"
+	        },
+            {
+    			"id": 6,
+	            "title": "Spider Man I",
+	            "description": "here are some description",
+                "poster": "x-man.jpg",
+	            "year": "2000",
+	            "director": "Tom Yu",
+	            "actors": ["Tom", "Sam"],
+                "createdAt": "2016-1-02"
+	        },
+            {
+    			"id": 7,
+	            "title": "Spider Man I",
+	            "description": "here are some description",
+                "poster": "x-man.jpg",
+	            "year": "2000",
+	            "director": "Tom Yu",
+	            "actors": ["Tom", "Sam"],
+                "createdAt": "2016-1-02"
+	        },
+            {
+    			"id": 8,
+	            "title": "Spider Man I",
+	            "description": "here are some description",
+                "poster": "x-man.jpg",
+	            "year": "2000",
+	            "director": "Tom Yu",
+	            "actors": ["Tom", "Sam"],
+                "createdAt": "2016-1-02"
 	        },
     	]);
 };

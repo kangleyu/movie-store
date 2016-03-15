@@ -18,6 +18,7 @@ module.exports = function(grunt) {
                     { expand: true, cwd: 'client/ext/bootstrap/dist/css', src: 'bootstrap.min.css', dest: 'public/css/' },
                     { expand: true, cwd: 'client/ext/bootstrap/dist/css', src: 'bootstrap-theme.min.css', dest: 'public/css/' },
                     { expand: true, cwd: 'client/ext/angular/', src: 'angular-csp.css', dest: 'public/css/' },
+                    { expand: true, cwd: 'client/css', src: '**', dest: 'public/css/', filter: 'isFile' },
 
                     // JS
                     { expand: true, cwd: 'client/ext/bootstrap/dist/js', src: 'bootstrap.js', dest: 'public/js/' },
@@ -52,5 +53,5 @@ module.exports = function(grunt) {
         }
     });
     
-    grunt.registerTask('default', ['copy', 'jade']);
+    grunt.registerTask('default', ['jade', 'copy']);
 }

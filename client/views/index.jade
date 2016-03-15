@@ -2,5 +2,5 @@ extends layout
 
 block content
     div(class="row")
-        div(class="col-sm-12 container" ng-repeat="movie in movies")
-            img(ng-src="/images/posters/{{movie.poster}}" class="thumbnail" width=200 height=300)
+        div(class="col-sm-12 col-md-12 col-xs-12")
+            img(ng-src="/images/posters/{{movie.poster}}" ng-click="goto_details(movie.id)" ng-repeat="movie in movies" class="img-thumbnail img-clickable" width=200 height=300)

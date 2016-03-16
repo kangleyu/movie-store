@@ -1,0 +1,44 @@
+###############
+#   Folders   #
+###############
+/node_modules
+/public
+/client/ext
+
+###############
+#  fixed file #
+###############
+*.exe
+*.txt
+*.def
+*.dsp
+*.lib
+*.doc
+*.dll
+*.lnt
+*.pm
+*.xls
+*.dbg
+*.DBG
+*.o
+*.plg
+*.keep
+.vscode
+
+
+###############
+#  temp file  #
+###############
+~*
+*.log
+*.cmm
+*.men
+*.ini
+*.fig
+*.cmp
+*.tmp
+
+###############
+#    script   #
+###############
+*.bat

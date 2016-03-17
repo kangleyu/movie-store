@@ -14,7 +14,7 @@ var api = require('./server/routes/api');
 app.use('/api/list', api.list);
 app.use('/api/get/:id', api.get);
 
-app.use(bodyParser.urlencoded({ extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.listen(8080);

@@ -1,109 +1,20 @@
-// JSON API for list of movies
-exports.list = function(req, res) {
-  res.json(
-    [
-    		{
-        "id": 0,
-        "title": "Spider Man I",
-        "description": "here are some description",
-        "poster": "x-man.jpg",
-        "year": "2000",
-        "director": "Tom Yu",
-        "actors": ["Tom", "Sam"],
-        "createdAt": "2016-1-02"
-      },
-      {
-        "id": 1,
-        "title": "Spider Man I",
-        "description": "here are some description",
-        "poster": "x-man.jpg",
-        "year": "2000",
-        "director": "Tom Yu",
-        "actors": ["Tom", "Sam"],
-        "createdAt": "2016-1-02"
-      },
-      {
-        "id": 2,
-        "title": "Spider Man I",
-        "description": "here are some description",
-        "poster": "x-man.jpg",
-        "year": "2000",
-        "director": "Tom Yu",
-        "actors": ["Tom", "Sam"],
-        "createdAt": "2016-1-02"
-      },
-      {
-        "id": 3,
-        "title": "Spider Man I",
-        "description": "here are some description",
-        "poster": "x-man.jpg",
-        "year": "2000",
-        "director": "Tom Yu",
-        "actors": ["Tom", "Sam"],
-        "createdAt": "2016-1-02"
-      },
-      {
-        "id": 4,
-        "title": "Spider Man I",
-        "description": "here are some description",
-        "poster": "x-man.jpg",
-        "year": "2000",
-        "director": "Tom Yu",
-        "actors": ["Tom", "Sam"],
-        "createdAt": "2016-1-02"
-      },
-      {
-        "id": 5,
-        "title": "Spider Man I",
-        "description": "here are some description",
-        "poster": "x-man.jpg",
-        "year": "2000",
-        "director": "Tom Yu",
-        "actors": ["Tom", "Sam"],
-        "createdAt": "2016-1-02"
-      },
-      {
-        "id": 6,
-        "title": "Spider Man I",
-        "description": "here are some description",
-        "poster": "x-man.jpg",
-        "year": "2000",
-        "director": "Tom Yu",
-        "actors": ["Tom", "Sam"],
-        "createdAt": "2016-1-02"
-      },
-      {
-        "id": 7,
-        "title": "Spider Man I",
-        "description": "here are some description",
-        "poster": "x-man.jpg",
-        "year": "2000",
-        "director": "Tom Yu",
-        "actors": ["Tom", "Sam"],
-        "createdAt": "2016-1-02"
-      },
-      {
-        "id": 8,
-        "title": "Spider Man I",
-        "description": "here are some description",
-        "poster": "x-man.jpg",
-        "year": "2000",
-        "director": "Tom Yu",
-        "actors": ["Tom", "Sam"],
-        "createdAt": "2016-1-02"
-      },
-    ]);
+// /server/routes
+// api definition for all interfaces
+var movies = require('./movies');
+var config = require('../config');
+
+function version(req, res) {
+  res.json(config.version);
 };
 
-exports.get = function(req, res) {
-  var id = req.params.id;
-  res.json({
-    "id": id,
-    "title": "Spider Man I",
-    "description": "here are some description",
-    "poster": "x-man.jpg",
-    "year": "2000",
-    "director": "Tom Yu",
-    "actors": ["Tom", "Sam"]
-  });
-};
+module.exports = function Api(app) {
+  app.get('/api/v', version);
+  app.get('/api/list', movies.list);
+  app.get('/api/get/:id', movies.get);
+  app.get('/api/page/:page', movies.page);
+  app.get('/api/total', movies.total);
+  app.get('/api/search/:pattern', movies.search);
+  app.post('/api/new', movies.create);
+  app.post('/api/update', movies.update);
+  app.delete('/api/delete/:id', movies.delete);
+}

@@ -1,7 +1,7 @@
 var config = require('../config');
 
 // Get the whole list of movies
-exports.list = function(req, res) {
+exports.movies = function(req, res) {
   res.json(
     [
     		{
@@ -98,7 +98,7 @@ exports.list = function(req, res) {
 };
 
 // get single movie based on provided id
-exports.get = function(req, res) {
+exports.movie = function(req, res) {
   var id = req.params.id;
   res.json({
     "id": id,

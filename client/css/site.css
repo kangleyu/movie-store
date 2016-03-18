@@ -1,3 +1,18 @@
+/* click image */
 img.img-clickable {
     cursor: pointer;
+}
+
+/* expandable row */
+.expandable {
+  display: none;
+  background-color: #444444;
+  height: 400px
+}
+
+/* site footer */
+#footer {
+  background-color: #f2f2f2;
+  color: #777;
+  padding: 20px;
 }

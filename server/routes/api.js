@@ -9,8 +9,8 @@ function version(req, res) {
 
 module.exports = function Api(app) {
   app.get('/api/v', version);
-  app.get('/api/list', movies.list);
-  app.get('/api/get/:id', movies.get);
+  app.get('/api/movies', movies.movies);
+  app.get('/api/movie/:id', movies.movie);
   app.get('/api/page/:page', movies.page);
   app.get('/api/total', movies.total);
   app.get('/api/search/:pattern', movies.search);

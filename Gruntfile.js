@@ -37,6 +37,9 @@ module.exports = function(grunt) {
           // Views - Jade (Might no need for this, if we don't use Jade view engine
           // and build the html file from jade file directly.)
           //{ expand: true, cwd: 'client/views', src: '**', dest: 'public/views/' }
+          
+          // Imgs
+          { expand: true, cwd: 'client/imgs', src: '**', dest: 'public/imgs/', filter: 'isFile'}
         ],
       },
     },

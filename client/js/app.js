@@ -4,7 +4,7 @@ module.controller('main_ctrl', ['$scope', '$http', '$location',
   function($scope, $http, $location) {
     $scope.title = "Movie Store";
 
-    $http.get('/api/list')
+    $http.get('/api/movies')
       .success(function(data, status, headers, config) {
         $scope.movies = data;
       })
@@ -12,7 +12,9 @@ module.controller('main_ctrl', ['$scope', '$http', '$location',
         $scope.movies = [];
       });
 
-    $scope.goto_details = function(id) {
-      $location.path("/movie/" + id);
+    $scope.showDetails = function(id) {
+      //$location.path("/movie/" + id);
+      //$(".movie_"+id).click(toggleMovieDetails);
+      $(this).parent(".col-md-2").siblings(".expandable").slideToggle('slow');
     }
   }]);

@@ -1,7 +1,10 @@
 // /server/routes
 // api definition for all interfaces
-var movies = require('./movies');
+var mongoose = require('mongoose');
 var config = require('../config');
+var movies = require('./movies');
+
+mongoose.connect(config.mongodbConnection);
 
 function version(req, res) {
   res.json(config.version);

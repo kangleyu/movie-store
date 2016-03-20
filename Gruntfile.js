@@ -7,8 +7,23 @@ module.exports = function(grunt) {
   //grunt.loadNpmTasks('grunt-contrib-htmlmin');
   //grunt.loadNpmTasks('grunt-contrib-concat');
   //grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-shell');
 
   grunt.initConfig({
+    shell: {
+      mongodb: {
+        command: 'mongod --dbpath ./data/db',
+        options: {
+          async: true,
+          stdout: false,
+          stderr: true,
+          failOnError: true,
+          execOptions: {
+            cwd: '.'
+          }
+        }
+      }
+    },
     copy: {
       main: {
         files: [

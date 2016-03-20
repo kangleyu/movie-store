@@ -4,6 +4,7 @@
 /node_modules
 /public
 /client/ext
+/data
 
 ###############
 #  fixed file #

@@ -3,6 +3,10 @@ img.img-clickable {
     cursor: pointer;
 }
 
+.row-container {
+  padding: 0px;
+}
+
 /* expandable row */
 .expandable {
   display: none;

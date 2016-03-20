@@ -2,7 +2,7 @@
 module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jade');
   grunt.loadNpmTasks('grunt-contrib-copy');
-  //grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   //grunt.loadNpmTasks('grunt-contrib-cssmin');
   //grunt.loadNpmTasks('grunt-contrib-htmlmin');
   //grunt.loadNpmTasks('grunt-contrib-concat');
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
           { expand: true, cwd: 'client/ext/jquery/dist', src: 'jquery.slim.min.js', dest: 'public/js/' },
           { expand: true, cwd: 'client/ext/angular/', src: 'angular.js', dest: 'public/js/' },
           { expand: true, cwd: 'client/ext/angular/', src: 'angular.min.js', dest: 'public/js/' },
-          { expand: true, cwd: 'client/js', src: '**', dest: 'public/js/', filter: 'isFile' },
+          //{ expand: true, cwd: 'client/js', src: '**', dest: 'public/js/', filter: 'isFile' },
 
           // Fonts
           { expand: true, cwd: 'client/ext/bootstrap/dist/fonts', src: '*', dest: 'public/fonts/', filter: 'isFile' },
@@ -50,11 +50,27 @@ module.exports = function(grunt) {
         },
         files: {
           "public/index.html": "client/views/index.jade",
-          "public/test.html": "client/views/test.jade"
+          "public/test.html": "client/views/test.jade",
+          "public/movieDetails.html": "client/views/movieDetails.jade"
         }
       }
-    }
+    },
+    // take all the js files and minify them into app.min.js
+    uglify: {
+      build: {
+        options: {
+          compress: false,
+          beautify: true,
+          mangle: false
+        },
+        files: {
+          'public/js/app.js': [
+            'client/js/app.js'
+            ]
+        }
+      }
+    },
   });
 
-  grunt.registerTask('default', ['jade', 'copy']);
+  grunt.registerTask('default', ['jade', 'copy', 'uglify']);
 }

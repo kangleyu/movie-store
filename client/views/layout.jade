@@ -2,13 +2,16 @@ doctype html
 html(lang='en', ng-app="moviestore_app" ng-controller="main_ctrl")
   head
     meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="icon", href="/imgs/favicon.ico")
     title {{title}}
     include ./includes/head
     block styles
   body
     // static navgiation bar
     nav(class="navbar navbar-inverse navbar-static-top")
-      div(class="container")
+      div(class="container-fluid")
         div(class="nav-header")
           button(type="button" class="navbar-toggle collapsed" data-toggle="copplase" data-target="#navbar" aria-expanded="false" aria-controls="navbar")
             span(class="sr-only") Toggle navigation
@@ -24,6 +27,10 @@ html(lang='en', ng-app="moviestore_app" ng-controller="main_ctrl")
     div(class="container-fluid")
       block content
     
+    footer(id="footer")
+      span(span class="pull-right")
+        a(href="/" title="Movie Store") Movie Store - Copyright &copy; 2016.
+          
     include ./includes/scripts
     block scripts
   

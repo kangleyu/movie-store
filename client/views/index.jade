@@ -2,8 +2,6 @@ extends layout
 
 block content
   div(class="row")
-    div(class="col-sm-12 col-md-12 col-xs-12")
-      //img(ng-src="/images/posters/{{movie.poster}}" ng-click="showDetails(movie.id)" ng-repeat="movie in movies" class="img-thumbnail img-clickable" width=200 height=300)
-      //img(ng-src="http://placehold.it/200x300" ng-click="showDetails(movie.id)" ng-repeat="movie in movies" class="img-thumbnail img-clickable" width=200 height=300)
-      div(class="col-md-2 col-sm-4 col-xs-6" ng-repeat="movie in movies")
+    div(class="col-sm-12 col-md-12 col-xs-12 row-container")
+      div(class="col-lg-1 col-md-2 col-sm-4 col-xs-6" ng-repeat="movie in movies")
         img(id="movie_{{movie.id}}" ng-src="http://placehold.it/200x300" class="img-thumbnail img-clickable" ng-click="showDetails(movie.id)")

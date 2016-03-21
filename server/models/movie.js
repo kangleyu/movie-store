@@ -1,5 +1,45 @@
-var mongoose = require('mongoose');
-var MovieSchema = require('../schemas/movie');
-var Movie = mongoose.model('Movie', MovieSchema);
+/**
+ * Model represent movie instance in mongodb
+ */
 
+var mongoose = require('mongoose');
+
+var MovieSchema = new mongoose.Schema({
+  title: String,
+  director: String,
+  actors: [String],
+	language: String,
+	country: String,
+	summary: String,
+	flash: String,
+	poster: String,
+	year: Number,
+	meta: {
+		createAt: { type: Date, default: Date.now() },
+		updateAt: { type: Date, default: Date.now() }
+	}
+});
+
+MovieSchema.pre('Save', function (next) {
+  if (this.isNew) {
+    this.meta.createAt = this.meta.updateAt = Date.now();
+  } else {
+    this.meta.updateAt = Date.now();
+  }
+  next();
+});
+
+MovieSchema.statics = {
+  fetch: function (cb) {
+    return this.find({})
+    .sort('meta.updateAt')
+    .exec(cb);
+  },
+  findById: function (id, cb) {
+    return this.findOne({ _id : id })
+    .exec(cb);
+  }
+};
+
+var Movie = mongoose.model('movie', MovieSchema);
 module.exports = Movie;

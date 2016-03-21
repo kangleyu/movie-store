@@ -1,5 +1,6 @@
-// /server/routes
-// api definition for all interfaces
+/**
+ * Rest API Definitions
+ */
 var mongoose = require('mongoose');
 var config = require('../config');
 var movies = require('./movies');

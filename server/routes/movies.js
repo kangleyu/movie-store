@@ -1,3 +1,6 @@
+/**
+ * Rest Movie API definitions
+ */
 var mongoose = require('mongoose');
 var config = require('../config');
 var Movie = require('../models/movie');
@@ -11,20 +14,6 @@ exports.movies = function(req, res) {
       res.json(movies);
     }
   });
-  // var movies = [];
-  // for (i = 0; i < 88; i++) {
-  //   movies.push({
-  //     "id": i,
-  //     "title": "Spider Man I",
-  //     "description": "here are some description",
-  //     "poster": "x-man.jpg",
-  //     "year": "2000",
-  //     "director": "Tom Yu",
-  //     "actors": ["Tom", "Sam"],
-  //     "createdAt": "2016-1-02"
-  //   })
-  // }
-  //res.json(movies);
 };
 
 // get single movie based on provided id
@@ -34,15 +23,6 @@ exports.movie = function(req, res) {
   Movie.findById(id, function (err, movie) {
     res.json(movie);
   })
-  // res.json({
-  //   "id": id,
-  //   "title": "Spider Man I",
-  //   "description": "here are some description",
-  //   "poster": "x-man.jpg",
-  //   "year": "2000",
-  //   "director": "Tom Yu",
-  //   "actors": ["Tom", "Sam"]
-  // });
 };
 
 // get movie list based on page

@@ -1,7 +1,9 @@
-// /server/config.js
-// define the server configuration
-// includes :
-//   - api version
+/**
+ * Server configuration
+ *  API Version
+ *  Page Size
+ *  Mongodb connection string
+ */
 module.exports = {
   version: '0.0.1',
   pageSize: '12',
